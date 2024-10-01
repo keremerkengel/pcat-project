@@ -1,0 +1,16 @@
+
+<%- include('layout') %>
+
+<h2>Edit Project</h2>
+<form action="/edit/<%= project._id %>" method="POST">
+  <label for="title">Title:</label>
+  <input type="text" name="title" id="title" value="<%= project.title %>" required>
+  
+  <label for="description">Description:</label>
+  <textarea name="description" id="description" required><%= project.description %></textarea>
+  
+  <label for="imageUrl">Image URL:</label>
+  <input type="text" name="imageUrl" id="imageUrl" value="<%= project.imageUrl %>" required>
+  
+  <button type="submit">Update Project</button>
+</form>
